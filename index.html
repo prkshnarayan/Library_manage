@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library Management System</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📚 Library Management System</h1>
+
+    <div class="action-boxes">
+      <div id="form-box">
+        <h3>Add Book</h3>
+        <label>Book Title:</label>
+        <input type="text" id="title" placeholder="Enter book title">
+        <label>Author:</label>
+        <input type="text" id="author" placeholder="Enter author name">
+        <label>ISBN:</label>
+        <input type="text" id="isbn" placeholder="Enter ISBN">
+        <button onclick="addBook()">Add Book</button>
+      </div>
+
+      <div id="borrow-box">
+        <h3>Borrow Book</h3>
+        <label>Student Name:</label>
+        <input type="text" id="student" placeholder="Enter student name">
+        <label>Book ISBN:</label>
+        <input type="text" id="borrowIsbn" placeholder="Enter ISBN to borrow">
+        <button onclick="borrowBook()">Borrow</button>
+      </div>
+
+      <div id="return-box">
+        <h3>Return Book</h3>
+        <label>Book ISBN:</label>
+        <input type="text" id="returnIsbn" placeholder="Enter ISBN to return">
+        <button onclick="returnBook()">Return</button>
+      </div>
+    </div>
+
+    <h2>📖 Available Books</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>ISBN</th>
+        </tr>
+      </thead>
+      <tbody id="book-table"></tbody>
+    </table>
+
+    <h2>🎓 Borrowed Books</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Student</th>
+          <th>Book Title</th>
+          <th>ISBN</th>
+        </tr>
+      </thead>
+      <tbody id="borrowed-table"></tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
